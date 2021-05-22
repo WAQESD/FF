@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KOTRA_GOTHIC";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.App {
+  background-color: #ff6e21;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.Container {
+  border-radius: 32px;
+  margin: 80px 0px;
+  padding: 50px 60px 60px 60px;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0px 0px 16px #805037;
+}
+
+.Container .title {
+  font-size: 20pt;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.Container .main {
+  font-size: 26pt;
+  font-family: "SEBANG_Gothic_Bold";
+}
+
+.question {
+  margin: 20px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-number {
+  font-size: 16pt;
+  color: white;
+  font-family: "KOTRA_BOLD-Bold";
+  background-color: #e87c13;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 3px 4px 2px 4px;
+  width: 90px;
+  height: 36px;
+  margin-left: auto;
+}
+.question-content {
+  font-family: "NanumBarunGothic";
+  font-size: 16pt;
+  line-height: 24pt;
+  display: flex;
+}
+.question-content .number {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.question-choice {
+  font-family: "NanumBarunGothic";
+  font-size: 14pt;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.question-choice:hover {
+  background-color: #e87c13;
+  border: 1px solid #e87c13;
+  color: white;
+}
+.button {
+  color: white;
+  font-family: "KOTRA_BOLD-Bold";
+  font-size: 18px;
+  border: 3px solid #e87c13;
+  border-radius: 32px;
+  width: 140px;
+  height: 40px;
+  background-color: #e87c13;
+  cursor: pointer;
+}
+.button:hover {
+  color: #e87c13;
+  background-color: white;
+}
+.title-box {
+  width: 100%;
+  display: flex;
+}
+.title-box .title {
+  font-size: 32pt;
+}
+.score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-left: auto;
+}
+.score {
+  font-family: "KOTRA_BOLD-Bold";
+  font-size: 40px;
+}
+.score-max {
+  font-family: "KOTRA_BOLD-Bold";
+  font-size: 40px;
+  color: black;
+  margin-left: 12px;
+}
+.result-description-box {
+  width: 100%;
+  height: 300px;
+  margin-top: 32px;
+}
+.result-description {
+  font-family: "KOTRA_BOLD-Bold";
+  color: #3b281f;
+  font-size: 24px;
+  margin-top: 8px;
+}
+.result-button {
+  color: white;
+  font-family: "KOTRA_BOLD-Bold";
+  font-size: 18px;
+  border: 3px solid #e87c13;
+  border-radius: 32px;
+  width: 140px;
+  height: 40px;
+  background-color: #e87c13;
+  cursor: pointer;
+}
+.result-button:hover {
+  color: #e87c13;
+  background-color: white;
+}
+.answer-box {
+  display: flex;
+  flex-direction: column;
+}
+.errata-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.errata {
+  display: flex;
+  flex-direction: column;
+}
+.errata-num,
+.errata-answer,
+.errata-select,
+.errata-result {
+  font-family: "NanumBarunGothic";
+  font-size: 14pt;
+  width: 48px;
+  height: 32px;
+  text-align: center;
+}
+.errata-num {
+  font-family: "KOTRA_BOLD-Bold";
+  font-size: 14pt;
+}
