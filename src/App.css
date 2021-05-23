@@ -180,18 +180,32 @@
 .errata {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .errata-num,
 .errata-answer,
 .errata-select,
 .errata-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "NanumBarunGothic";
+  font-weight: bold;
   font-size: 14pt;
-  width: 48px;
+  width: 40px;
   height: 32px;
   text-align: center;
 }
 .errata-num {
   font-family: "KOTRA_BOLD-Bold";
   font-size: 14pt;
+}
+
+.errata:nth-child(1) .errata-result,
+.errata:nth-child(1) .errata-answer,
+.errata:nth-child(1) .errata-select {
+  font-family: "SEBANG_Gothic_Bold";
+  font-size: 15pt;
+  margin-right: 4px;
 }
