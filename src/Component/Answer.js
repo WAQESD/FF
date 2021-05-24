@@ -1,8 +1,11 @@
 import React from "react";
 import Errata from "./Errata";
+import Commentary from "./Commentary";
+import FAB from "./FAB";
 
-const Answer = ({ answer, select }) => {
+const Answer = ({ answer, select, questions }) => {
   let errata = [];
+  let commentary = [];
 
   const num2alp = (num) => {
     if (num == 1) {
@@ -13,6 +16,7 @@ const Answer = ({ answer, select }) => {
       return "C";
     }
   };
+
   const makeErrata = () => {
     errata.push(
       <Errata num="" answer="정답" select="답안" result="결과"></Errata>
@@ -28,10 +32,29 @@ const Answer = ({ answer, select }) => {
       );
     }
   };
+
+  const makeCommentary = () => {
+    for (let i = 1; i < 14; i++) {
+      commentary.push(
+        <Commentary
+          num={i}
+          choice={questions[i].choice}
+          answer={answer[i - 1]}
+          select={select[i]}
+          content={questions[i].content}
+        ></Commentary>
+      );
+    }
+  };
+
   makeErrata();
+  makeCommentary();
+
   return (
     <div className="answer-box">
       <div className="errata-box">{errata}</div>
+      <div className="commentary-box">{commentary}</div>
+      <FAB></FAB>
     </div>
   );
 };

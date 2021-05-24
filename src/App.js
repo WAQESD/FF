@@ -111,9 +111,81 @@ function App() {
   };
   return (
     <div className="App">
-      <Container>
-        {num ? (
-          num < 14 ? (
+      <div>
+        <Container>
+          {num ? (
+            num < 14 ? (
+              <div>
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                  }}
+                >
+                  <span className="title">
+                    팩트풀니스 테스트 (Factfullness Test)
+                  </span>
+                  <div className="question-number"> {`${num} / 13`} </div>
+                </div>
+                <Question
+                  num={num}
+                  content={content}
+                  choice={choice}
+                  select={select[num]}
+                  onClick={(n) => {
+                    onClick(n);
+                    setNum(num + 1);
+                  }}
+                ></Question>
+              </div>
+            ) : num < 15 ? (
+              <div>
+                <div className="title-box">
+                  <div className="title">당신의 점수는?</div>
+                  <div className="score-box">
+                    <span
+                      className="score"
+                      style={{
+                        color: `rgba(232,124,19,${
+                          0.5 + (0.5 * checkScore(select)) / 13
+                        })`,
+                      }}
+                    >
+                      {checkScore(select)}
+                    </span>
+                    <span className="score-max"> {" / 13"}</span>
+                  </div>
+                </div>
+                <div className="result-description-box">
+                  <div className="result-description">
+                    당신은 {checkScore(select)}점이군요.
+                  </div>
+                  <div className="result-description">
+                    너무 걱정하지는 마세요. 전 세계 평균은 2점 정도니까요.
+                  </div>
+                  <div className="result-description">
+                    어떤 문제를 틀렸는지 확인해보세요.
+                  </div>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <button
+                    className="result-button"
+                    onClick={() => {
+                      setNum(15);
+                    }}
+                  >
+                    해설 보기
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Answer
+                select={select}
+                answer={answer}
+                questions={questions}
+              ></Answer>
+            )
+          ) : (
             <div
               style={{
                 width: "100%",
@@ -122,101 +194,33 @@ function App() {
                 flexDirection: "column",
               }}
             >
+              <span className="main">
+                팩트풀니스 테스트 (Factfullness Test)
+              </span>
+              <div className="main-content"></div>
+              <div className="main-content"></div>
+              <div className="main-content"></div>
               <div
                 style={{
                   width: "100%",
                   display: "flex",
+                  justifyContent: "center",
+                  marginTop: "auto",
                 }}
               >
-                <span className="title">
-                  팩트풀니스 테스트 (Factfullness Test)
-                </span>
-                <div className="question-number"> {`${num} / 13`} </div>
-              </div>
-              <Question
-                num={num}
-                content={content}
-                choice={choice}
-                select={select[num]}
-                onClick={(n) => {
-                  onClick(n);
-                  setNum(num + 1);
-                }}
-              ></Question>
-            </div>
-          ) : num < 15 ? (
-            <div>
-              <div className="title-box">
-                <div className="title">당신의 점수는?</div>
-                <div className="score-box">
-                  <span
-                    className="score"
-                    style={{
-                      color: `rgba(232,124,19,${
-                        0.5 + (0.5 * checkScore(select)) / 13
-                      })`,
-                    }}
-                  >
-                    {checkScore(select)}
-                  </span>
-                  <span className="score-max"> {" / 13"}</span>
-                </div>
-              </div>
-              <div className="result-description-box">
-                <div className="result-description">
-                  당신은 {checkScore(select)}점이군요.
-                </div>
-                <div className="result-description">
-                  너무 걱정하지는 마세요. 전세계 평균도 2점 정도니까요.
-                </div>
-                <div className="result-description">
-                  어떤 문제를 틀렸는지 확인해보세요.
-                </div>
-              </div>
-              <div style={{ display: "flex", justifyContent: "center" }}>
                 <button
-                  className="result-button"
+                  className="button"
                   onClick={() => {
-                    setNum(15);
+                    setNum(1);
                   }}
                 >
-                  해설 보기
+                  시작하기
                 </button>
               </div>
             </div>
-          ) : (
-            <Answer select={select} answer={answer}></Answer>
-          )
-        ) : (
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <span className="main">팩트풀니스 테스트 (Factfullness Test)</span>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "auto",
-              }}
-            >
-              <button
-                className="button"
-                onClick={() => {
-                  setNum(1);
-                }}
-              >
-                시작하기
-              </button>
-            </div>
-          </div>
-        )}
-      </Container>
+          )}
+        </Container>
+      </div>
     </div>
   );
 }
