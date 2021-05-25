@@ -27,7 +27,8 @@ const Errata = ({ num, answer, select, result }) => {
   };
 
   const onClick = () => {
-    let location = document.querySelectorAll(".commentary")[num - 1].offsetTop;
+    let location =
+      document.querySelectorAll(".commentary")[num - 1].offsetTop - 200;
     window.scrollTo({ top: location, behavior: "smooth" });
   };
 
