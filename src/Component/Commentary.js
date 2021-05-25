@@ -35,7 +35,7 @@ const Commentary = (props) => {
       </div>
       {answer == select ? (
         <div
-          style={{ marginTop: "32px", display: "flex", flexDirection: "row" }}
+          style={{ marginTop: "16px", display: "flex", flexDirection: "row" }}
         >
           <div className="correct-box"></div>
           <div className="correct">정답</div>
@@ -44,7 +44,7 @@ const Commentary = (props) => {
         </div>
       ) : (
         <div
-          style={{ marginTop: "32px", display: "flex", flexDirection: "row" }}
+          style={{ marginTop: "16px", display: "flex", flexDirection: "row" }}
         >
           <div className="answer-box"></div>
           <div className="answer">정답</div>

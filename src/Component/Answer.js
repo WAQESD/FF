@@ -6,7 +6,6 @@ import FAB from "./FAB";
 const Answer = ({ answer, select, questions }) => {
   let errata = [];
   let commentary = [];
-
   const num2alp = (num) => {
     if (num == 1) {
       return "A";
@@ -19,11 +18,12 @@ const Answer = ({ answer, select, questions }) => {
 
   const makeErrata = () => {
     errata.push(
-      <Errata num="" answer="정답" select="답안" result="결과"></Errata>
+      <Errata num="" answer="정답" select="답안" result="결과" key={0}></Errata>
     );
     for (let i = 1; i < 14; i++) {
       errata.push(
         <Errata
+          key={i}
           num={i}
           answer={num2alp(answer[i - 1])}
           select={num2alp(select[i])}
@@ -37,6 +37,7 @@ const Answer = ({ answer, select, questions }) => {
     for (let i = 1; i < 14; i++) {
       commentary.push(
         <Commentary
+          key={i}
           num={i}
           choice={questions[i].choice}
           answer={answer[i - 1]}

@@ -189,6 +189,7 @@
   align-items: center;
   cursor: pointer;
 }
+
 .errata-num,
 .errata-answer,
 .errata-select,
@@ -301,8 +302,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 90%;
-  right: 15%;
   font-size: 28pt;
   width: 60px;
   height: 48px;
