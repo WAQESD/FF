@@ -31,6 +31,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "SEBANG_Gothic_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .App {
   display: flex;
   justify-content: center;
@@ -58,12 +65,25 @@
   font-family: "SEBANG_Gothic_Bold";
 }
 
-.main-content {
-  font-size: 18pt;
-  font-family: "NanumBarunGothic";
-  margin-top: 16px;
+.main-content-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
 }
 
+.main-content {
+  font-size: 16pt;
+  font-family: "KOTRA_GOTHIC";
+  margin-left: 16px;
+  line-height: 24pt;
+  margin-top: 12px;
+}
+.main-content:nth-child(1) {
+  margin-top: 0px;
+}
+.book-image {
+  image-rendering: -webkit-optimize-contrast;
+}
 .question {
   margin-top: 20px;
   height: 300px;
@@ -187,7 +207,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.errata-wrong {
+  background-color: #c73510;
+  color: white;
+  border-radius: 6px;
+  margin: 0px 4px;
   cursor: pointer;
+}
+.errata-wrong:hover {
+  background-color: #b5300e;
+}
+.errata-correct {
+  background-color: #1fab2f;
+  color: white;
+  border-radius: 6px;
+  margin: 0px 4px;
+  cursor: pointer;
+}
+.errata-correct:hover {
+  background-color: #198c27;
 }
 
 .errata-num,
