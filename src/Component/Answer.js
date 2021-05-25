@@ -55,6 +55,18 @@ const Answer = ({ answer, select, questions }) => {
     <div className="answer-box">
       <div className="errata-box">{errata}</div>
       <div className="commentary-box">{commentary}</div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <button
+          className="button"
+          style={{ marginRight: "40px" }}
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          다시 풀기
+        </button>
+        <button className="button">공유하기</button>
+      </div>
       <FAB></FAB>
     </div>
   );
