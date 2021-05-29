@@ -54,6 +54,7 @@ const Answer = ({ answer, select, questions }) => {
   return (
     <div className="answer-box">
       <div className="errata-box">{errata}</div>
+      <div className="mobile-slide">{`← →`}</div>
       <div className="commentary-box">{commentary}</div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <button
