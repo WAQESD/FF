@@ -15,8 +15,9 @@ const FAB = () => {
     });
     return document.querySelector(".Container").offsetLeft + 760;
   });
+  const mobile = window.outerWidth < 769;
 
-  return (
+  return !mobile ? (
     <div
       className="upfab"
       style={{ top: top, left: left }}
@@ -26,6 +27,8 @@ const FAB = () => {
     >
       {"^"}
     </div>
+  ) : (
+    <div></div>
   );
 };
 
