@@ -23,18 +23,40 @@ const questions = mongoose.Schema({
   choice: { type: Array, require: true },
 });
 
+const statistic = mongoose.Schema({
+  number: { type: Number, require: true, unique: true },
+  answer: { type: Number, require: true },
+  A: { type: Number, require: true },
+  B: { type: Number, require: true },
+  C: { type: Number, require: true },
+});
+
+const Statistic = mongoose.model("Statistic", statistic);
 const Question = mongoose.model("Questions", questions);
 
 const initDB = require("./initDB.js");
+const e = require("express");
 
 Question.find(function (error, questions) {
   if (error) {
     console.log(error);
   } else {
-    if (!questions) {
-      initDB.init(Question);
+    if (!questions.length) {
+      initDB.setQuestion(Question);
     } else {
       console.log("data already exist");
+    }
+  }
+});
+
+Statistic.find(function (error, statistic) {
+  if (error) {
+    console.log(error);
+  } else {
+    if (!statistic.length) {
+      initDB.setStatistic(Statistic);
+    } else {
+      console.log("answer already exist");
     }
   }
 });
@@ -61,18 +83,34 @@ app.get("/questions", (req, res) => {
 });
 
 app.post("/result", jsonParser, function (req, res) {
-  if (req.body.select.length === 13 && req.body.time > 5000) {
-    console.log(req.body);
+  if (req.body.select.length === 13 && req.body.time > 1000) {
     var newResult = new Result(req.body);
     newResult.save(function (error, data) {
       if (error) {
         console.log(error);
       } else {
-        Result.find(function (error, results) {
+        Statistic.find((error, statistic) => {
           if (error) {
             console.log(error);
           } else {
-            console.log(results.length);
+            statistic.map(({ number, A, B, C }) => {
+              console.log(number, A, B, C);
+              let select = req.body.select[number - 1];
+              console.log(select);
+              if (select === 1) {
+                Statistic.updateOne({ number: number }, { A: A + 1 })
+                  .then((res) => console.log(res))
+                  .catch((e) => console.log(e));
+              } else if (select === 2) {
+                Statistic.updateOne({ number: number }, { B: B + 1 })
+                  .then((res) => console.log(res))
+                  .catch((e) => console.log(e));
+              } else {
+                Statistic.updateOne({ number: number }, { C: C + 1 })
+                  .then((res) => console.log(res))
+                  .catch((e) => console.log(e));
+              }
+            });
           }
         });
       }

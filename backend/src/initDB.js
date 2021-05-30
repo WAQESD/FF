@@ -1,4 +1,4 @@
-var questions = [
+const questions = [
   { qid: 1, content: "", choice: ["", "", ""] },
   {
     qid: 2,
@@ -84,7 +84,9 @@ var questions = [
   { qid: 16, content: "", choice: ["", "", ""] },
 ];
 
-exports.init = function (Question) {
+const answer = [3, 2, 3, 3, 3, 3, 3, 1, 3, 1, 3, 3, 1];
+
+exports.setQuestion = function (Question) {
   questions.map((question) => {
     var newQuestion = new Question(question);
     newQuestion.save(function (error, data) {
@@ -95,4 +97,16 @@ exports.init = function (Question) {
       }
     });
   });
+};
+
+exports.setStatistic = function (Statistic) {
+  for (let i = 1; i < 14; i++) {
+    var newStatistic = new Statistic({
+      number: i,
+      answer: answer[i - 1],
+      A: 0,
+      B: 0,
+      C: 0,
+    }).save();
+  }
 };
