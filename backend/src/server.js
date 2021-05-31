@@ -34,15 +34,14 @@ const statistic = mongoose.Schema({
 const Statistic = mongoose.model("Statistic", statistic);
 const Question = mongoose.model("Questions", questions);
 
-const initDB = require("./initDB.js");
-const e = require("express");
+const setDB = require("./setDB.js");
 
 Question.find(function (error, questions) {
   if (error) {
     console.log(error);
   } else {
     if (!questions.length) {
-      initDB.setQuestion(Question);
+      setDB.setQuestion(Question);
     } else {
       console.log("data already exist");
     }
@@ -54,7 +53,7 @@ Statistic.find(function (error, statistic) {
     console.log(error);
   } else {
     if (!statistic.length) {
-      initDB.setStatistic(Statistic);
+      setDB.setStatistic(Statistic);
     } else {
       console.log("answer already exist");
     }
@@ -77,8 +76,8 @@ app.listen(port, () => {
 });
 
 app.get("/questions", (req, res) => {
-  Question.find(function (error, questinos) {
-    res.send(JSON.stringify(questinos));
+  Question.find(function (error, questions) {
+    res.send(JSON.stringify(questions));
   });
 });
 
@@ -118,3 +117,6 @@ app.post("/result", jsonParser, function (req, res) {
   }
   res.send("complete");
 });
+
+const router = require("./build/main.js");
+router.index();
