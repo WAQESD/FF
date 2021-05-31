@@ -81,6 +81,12 @@ app.get("/questions", (req, res) => {
   });
 });
 
+app.get("/statistic", (req, res) => {
+  Statistic.find(function (error, statistics) {
+    res.send(JSON.stringify(statistics));
+  });
+});
+
 app.post("/result", jsonParser, function (req, res) {
   if (req.body.select.length === 13 && req.body.time > 1000) {
     var newResult = new Result(req.body);
@@ -118,5 +124,5 @@ app.post("/result", jsonParser, function (req, res) {
   res.send("complete");
 });
 
-const router = require("./build/main.js");
+const router = require("./main/main.js");
 router.index();
