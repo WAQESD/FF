@@ -1,0 +1,427 @@
+@font-face {
+  font-family: "KOTRA_BOLD-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KOTRA_GOTHIC";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SEBANG_Gothic_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (min-width: 769px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6e21;
+    min-height: 100vh;
+  }
+
+  .Container {
+    border-radius: 32px;
+    margin: 80px 0px;
+    padding: 50px 60px 60px 60px;
+    width: 600px;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 16px #805037;
+  }
+  .button {
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 18px;
+    border: 3px solid #e87c13;
+    border-radius: 32px;
+    width: 140px;
+    height: 40px;
+    background-color: #e87c13;
+    cursor: pointer;
+    margin-top: 80px;
+  }
+  .button:hover {
+    color: #e87c13;
+    background-color: white;
+  }
+  .title-box {
+    width: 100%;
+    display: flex;
+  }
+  .title-box .title {
+    font-size: 32pt;
+  }
+  .score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-left: auto;
+  }
+  .score {
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 40px;
+  }
+  .score-max {
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 40px;
+    color: black;
+    margin-left: 12px;
+  }
+  .result-description-box {
+    width: 100%;
+    height: 300px;
+    margin-top: 32px;
+  }
+  .result-description {
+    font-family: "KOTRA_BOLD-Bold";
+    color: #3b281f;
+    font-size: 24px;
+    margin-top: 8px;
+  }
+  .result-button {
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 18px;
+    border: 3px solid #e87c13;
+    border-radius: 32px;
+    width: 140px;
+    height: 40px;
+    background-color: #e87c13;
+    cursor: pointer;
+  }
+  .result-button:hover {
+    color: #e87c13;
+    background-color: white;
+  }
+
+  .errata-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 144px;
+  }
+  .mobile-slide {
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .commentary {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .commentary:nth-child(1) {
+    margin-top: 0px;
+  }
+  .commentary:nth-child(13) {
+    margin-bottom: 0px;
+  }
+
+  .commentary-number {
+    font-size: 16pt;
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    background-color: #e87c13;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 3px 4px 2px 4px;
+    width: 90px;
+    height: 36px;
+    margin-left: auto;
+  }
+  .commentary-content {
+    font-family: "NanumBarunGothic";
+    font-size: 16pt;
+    line-height: 24pt;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .commentary-content .number {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .choice-box {
+    display: flex;
+    align-items: center;
+  }
+  .commentary-choice {
+    font-family: "NanumBarunGothic";
+    font-size: 14pt;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 12px 16px;
+    width: 80%;
+  }
+  .choice-ratio {
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 14pt;
+    text-align: center;
+    margin-left: 16px;
+    margin-top: 8px;
+    color: #052509;
+  }
+
+  .commentary .correct,
+  .commentary .wrong {
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 12pt;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+  .commentary .correct-box {
+    width: 18px;
+    height: 18px;
+    margin: 0px 4px;
+    background-image: linear-gradient(90deg, #ff9085, #e86d87);
+  }
+
+  .commentary .answer,
+  .commentary .select {
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 12pt;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .commentary .answer-box {
+    width: 20px;
+    height: 20px;
+    margin: 0px 4px;
+    background-color: #1fab2f;
+  }
+
+  .commentary .select-box {
+    width: 20px;
+    height: 20px;
+    margin: 0px 4px;
+    background-color: #c73510;
+  }
+
+  .upfab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 28pt;
+    width: 60px;
+    height: 48px;
+    background-color: white;
+    border-radius: 28px;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px #805037;
+    padding-top: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6e21;
+    min-height: 100vh;
+  }
+
+  .Container {
+    border-radius: 32px;
+    margin: 6vh 0px;
+    padding: 6vh 8vw 6vh 8vw;
+    width: 70vw;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 16px #805037;
+  }
+
+  .button {
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 12pt;
+    border: 3px solid #e87c13;
+    border-radius: 32px;
+    width: 140px;
+    height: 40px;
+    background-color: #e87c13;
+    cursor: pointer;
+    margin-top: 80px;
+  }
+  .button:hover {
+    color: #e87c13;
+    background-color: white;
+  }
+  .title-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title-box .title {
+    font-size: 26pt;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  .score {
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 40px;
+  }
+  .score-max {
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 40px;
+    color: black;
+    margin-left: 12px;
+  }
+  .result-description-box {
+    width: 100%;
+    height: 240px;
+    margin-top: 16px;
+  }
+  .result-description {
+    font-family: "KOTRA_BOLD-Bold";
+    color: #3b281f;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+  .result-button {
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 18px;
+    border: 3px solid #e87c13;
+    border-radius: 32px;
+    width: 140px;
+    height: 40px;
+    background-color: #e87c13;
+    cursor: pointer;
+  }
+  .result-button:hover {
+    color: #e87c13;
+    background-color: white;
+  }
+
+  .commentary {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .commentary:nth-child(13) {
+    margin-bottom: 0px;
+  }
+  .commentary-number {
+    font-size: 10pt;
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    background-color: #e87c13;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2px 4px 2px 4px;
+    width: 90px;
+    height: 24px;
+    margin-left: auto;
+  }
+  .commentary-content {
+    font-family: "NanumBarunGothic";
+    font-size: 12pt;
+    line-height: 18pt;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .commentary-content .number {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .commentary-choice {
+    font-family: "NanumBarunGothic";
+    font-size: 12pt;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 12px 16px;
+  }
+
+  .commentary .correct,
+  .commentary .wrong {
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 10pt;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .commentary .correct-box {
+    width: 15px;
+    height: 15px;
+    margin: 0px 4px;
+    background-color: #1fab2f;
+  }
+
+  .commentary .answer,
+  .commentary .select {
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 10pt;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .commentary .answer-box {
+    width: 15px;
+    height: 15px;
+    margin: 0px 4px;
+    background-color: #1fab2f;
+  }
+
+  .commentary .select-box {
+    width: 15px;
+    height: 15px;
+    margin: 0px 4px;
+    background-color: #c73510;
+  }
+
+  .upfab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 28pt;
+    width: 60px;
+    height: 48px;
+    background-color: white;
+    border-radius: 28px;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px #805037;
+    padding-top: 4px;
+  }
+}
