@@ -1,10 +1,21 @@
 import React from "react";
 import Container from "./Container";
 import Question from "./Question";
+import { useState } from "react";
 
 const QuestionBox = ({ content, num, choice, select, onClick, setNum }) => {
+  const [animate, setAnimate] = useState("question-box");
+
+  const click = (n) => {
+    setAnimate("question-box-out");
+    setTimeout((n) => {
+      onClick(n);
+      setNum(num + 1);
+    }, 300);
+  };
+
   return (
-    <Container>
+    <Container className={animate} key={num}>
       <div>
         <div
           style={{
@@ -21,8 +32,7 @@ const QuestionBox = ({ content, num, choice, select, onClick, setNum }) => {
           choice={choice}
           select={select[num]}
           onClick={(n) => {
-            onClick(n);
-            setNum(num + 1);
+            click(n);
           }}
         ></Question>
       </div>

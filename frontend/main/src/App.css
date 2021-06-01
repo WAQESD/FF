@@ -38,6 +38,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@keyframes slideleft {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -150%;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .App {
     display: flex;
@@ -54,6 +73,17 @@
     min-height: 300px;
     background-color: white;
     box-shadow: 0px 0px 16px #805037;
+  }
+  .question-box {
+    animation-name: slideleft;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .question-box-out {
+    margin-left: 150%;
+    animation-name: slideright;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 
   .Container .title {
