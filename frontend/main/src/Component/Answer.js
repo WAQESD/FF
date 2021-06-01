@@ -2,6 +2,7 @@ import React from "react";
 import Errata from "./Errata";
 import Commentary from "./Commentary";
 import FAB from "./FAB";
+import Container from "./Container";
 
 const Answer = ({ answer, select, questions }) => {
   let errata = [];
@@ -52,24 +53,26 @@ const Answer = ({ answer, select, questions }) => {
   makeCommentary();
 
   return (
-    <div className="answer-box">
-      <div className="errata-box">{errata}</div>
-      <div className="mobile-slide">{`← →`}</div>
-      <div className="commentary-box">{commentary}</div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <button
-          className="button"
-          style={{ marginRight: "40px" }}
-          onClick={() => {
-            window.location.reload();
-          }}
-        >
-          다시 풀기
-        </button>
-        <button className="button">공유하기</button>
+    <Container>
+      <div className="answer-box">
+        <div className="errata-box">{errata}</div>
+        <div className="mobile-slide">{`← →`}</div>
+        <div className="commentary-box">{commentary}</div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button
+            className="button"
+            style={{ marginRight: "40px" }}
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
+            다시 풀기
+          </button>
+          <button className="button">공유하기</button>
+        </div>
+        <FAB></FAB>
       </div>
-      <FAB></FAB>
-    </div>
+    </Container>
   );
 };
 
