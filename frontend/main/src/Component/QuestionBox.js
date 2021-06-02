@@ -8,7 +8,7 @@ const QuestionBox = ({ content, num, choice, select, onClick, setNum }) => {
 
   const click = (n) => {
     setAnimate("question-box-out");
-    setTimeout((n) => {
+    setTimeout(() => {
       onClick(n);
       setNum(num + 1);
     }, 300);
@@ -31,9 +31,7 @@ const QuestionBox = ({ content, num, choice, select, onClick, setNum }) => {
           content={content}
           choice={choice}
           select={select[num]}
-          onClick={(n) => {
-            click(n);
-          }}
+          onClick={click}
         ></Question>
       </div>
     </Container>
