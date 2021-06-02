@@ -99,6 +99,7 @@ function App() {
           select={select}
           onClick={onClick}
           setNum={setNum}
+          key={num}
         ></QuestionBox>
       );
     }
