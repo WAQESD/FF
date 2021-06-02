@@ -41,7 +41,7 @@
 
 @keyframes slideleft {
   0% {
-    margin-left: 100%;
+    margin-left: 50%;
   }
   100% {
     margin-left: 0%;
@@ -80,9 +80,9 @@
     animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .question-box-out {
-    margin-left: 150%;
+    margin-left: -150%;
     animation-name: slideright;
-    animation-duration: 0.3s;
+    animation-duration: 0.4s;
     animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 
