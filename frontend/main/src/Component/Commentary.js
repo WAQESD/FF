@@ -8,20 +8,20 @@ const Commentary = (props) => {
   const applyStyle = () => {
     if (answer == select) {
       style[answer] = {
-        backgroundColor: "#1FAB2F",
+        backgroundColor: "#289588",
         color: "white",
-        border: "1px solid #1FAB2F",
+        border: "1px solid #289588",
       };
     } else {
       style[answer] = {
-        backgroundColor: "#1FAB2F",
+        backgroundColor: "#289588",
         color: "white",
-        border: "1px solid #1FAB2F",
+        border: "1px solid #289588",
       };
       style[select] = {
-        backgroundColor: "#c73510",
+        backgroundColor: "#E56342",
         color: "white",
-        border: "1px solid #c73510",
+        border: "1px solid #E56342",
       };
     }
   };
