@@ -3,8 +3,9 @@ import Errata from "./Errata";
 import Commentary from "./Commentary";
 import FAB from "./FAB";
 import Container from "./Container";
+import Modal from "./Modal";
 
-const Answer = ({ answer, select, questions }) => {
+const Answer = ({ answer, select, questions, setModal }) => {
   let errata = [];
   let commentary = [];
   const num2alp = (num) => {
@@ -49,8 +50,12 @@ const Answer = ({ answer, select, questions }) => {
     }
   };
 
-  makeErrata();
-  makeCommentary();
+  const makeModal = () => {
+    let top = window.scrollY;
+    setModal(<Modal setModal={setModal} top={top}></Modal>);
+  };
+  if (!errata.length) makeErrata();
+  if (!commentary.length) makeCommentary();
 
   return (
     <Container>
@@ -68,9 +73,10 @@ const Answer = ({ answer, select, questions }) => {
           >
             다시 풀기
           </button>
-          <button className="button">공유하기</button>
+          <button className="button" onClick={makeModal}>
+            공유하기
+          </button>
         </div>
-        <FAB></FAB>
       </div>
     </Container>
   );

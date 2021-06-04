@@ -15,6 +15,7 @@ const answer = [3, 2, 3, 3, 3, 3, 3, 1, 3, 1, 3, 3, 1];
 function App() {
   const [num, setNum] = useState(0);
   const [select, setSelect] = useState(new Array(14));
+  const [modal, setModal] = useState(undefined);
 
   const start = () => {
     fetch(URL + "/questions")
@@ -88,7 +89,12 @@ function App() {
       );
     } else if (num > 14) {
       setApp(
-        <Answer answer={answer} select={select} questions={questions}></Answer>
+        <Answer
+          answer={answer}
+          select={select}
+          questions={questions}
+          setModal={setModal}
+        ></Answer>
       );
     } else {
       setApp(
@@ -108,6 +114,7 @@ function App() {
   return (
     <div className="App">
       <div>{app}</div>
+      <div>{modal}</div>
     </div>
   );
 }
