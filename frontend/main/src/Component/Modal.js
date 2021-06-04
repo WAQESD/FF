@@ -22,7 +22,12 @@ const Modal = ({ setModal, top }) => {
   window.addEventListener("scroll", event);
 
   const copyLink = () => {
-    navigator.clipboard.writeText(url);
+    const t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = url;
+    t.select();
+    document.execCommand("copy");
+    document.body.removeChild(t);
     setAlert("링크가 복사되었습니다");
   };
   return (

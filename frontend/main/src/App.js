@@ -8,7 +8,8 @@ import { useState, useEffect } from "react";
 let questions = [];
 let time = new Date();
 let submit = false;
-const URL = "http://localhost:8080";
+const URL =
+  "http://ec2-13-125-219-111.ap-northeast-2.compute.amazonaws.com:8080";
 
 const answer = [3, 2, 3, 3, 3, 3, 3, 1, 3, 1, 3, 3, 1];
 
