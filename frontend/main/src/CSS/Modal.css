@@ -1,0 +1,139 @@
+@media screen and (min-width: 769px) {
+  .modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1.5px);
+  }
+  .modal-window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 650px;
+    margin-bottom: 250px;
+    background-color: white;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    z-index: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .modal-title {
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 12pt;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .modal-button {
+    border: none;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 14pt;
+    text-align: center;
+    background-color: white;
+    margin-left: auto;
+    cursor: pointer;
+    color: #f18a35;
+  }
+  .modal-link-box {
+    display: flex;
+    width: 80%;
+    height: 45px;
+    margin-top: 16px;
+    border: 3px solid #f18a35;
+    border-radius: 8px;
+  }
+  .modal-link {
+    font-family: "NanumBarunGothic";
+    font-size: 12pt;
+    padding: 8px 4px 8px 4px;
+    margin: 3px 0px 3px 8px;
+    width: 80%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .modal-link::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .modal-link::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(233, 196, 106, 0.7);
+  }
+  .modal-link::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: rgba(233, 196, 106, 0.3);
+  }
+  .modal-link-copy {
+    width: 15%;
+    height: 47px;
+    margin-top: -1px;
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 14pt;
+    margin-left: auto;
+    border: none;
+    border-radius: 0 0 0 0 4px 4px 0;
+    color: white;
+    background-color: #f18a35;
+    padding-bottom: 8px;
+    cursor: pointer;
+  }
+  .modal-link-copy:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .modal-copy-alert {
+    font-family: "NanumBarunGothic";
+    font-size: 11pt;
+    margin-top: 6px;
+    color: #264653;
+  }
+  .modal-sns-box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    margin: 20px 0px 4px 0px;
+  }
+  .modal-twitter-icon,
+  .modal-facebook-icon,
+  .modal-kakao-icon {
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+  }
+  .modal-twitter-icon {
+    background-image: url(../Icons/icon-twitter.png);
+  }
+  .modal-facebook-icon {
+    background-image: url(../Icons/icon-facebook.png);
+  }
+  .modal-kakao-icon {
+    background-image: url(../Icons/icon-kakao.png);
+  }
+  .modal-sns {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .modal-sns:hover {
+    color: black;
+  }
+  .modal-sns-text {
+    margin-top: 8px;
+    font-family: "SEBANG_Gothic_Bold";
+    font-size: 11pt;
+  }
+}
+@media screen and (max-width: 768px) {
+}

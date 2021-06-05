@@ -1,0 +1,104 @@
+@media screen and (min-width: 769px) {
+  .question {
+    margin-top: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .question-number {
+    font-size: 16pt;
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    background-color: #f18a35;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 3px 4px 2px 4px;
+    width: 90px;
+    height: 36px;
+    margin-left: auto;
+  }
+  .question-content {
+    font-family: "NanumBarunGothic";
+    font-size: 16pt;
+    line-height: 24pt;
+    display: flex;
+  }
+  .question-content .number {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .question-choice {
+    font-family: "NanumBarunGothic";
+    font-size: 14pt;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+  .question-choice:hover {
+    background-color: #f18a35;
+    border: 1px solid #f18a35;
+    color: white;
+  }
+  .question-box {
+    animation-name: slideleft;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .question-box-out {
+    margin-left: -150%;
+    animation-name: slideright;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .question {
+    margin-top: 20px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question-number {
+    font-size: 10pt;
+    color: white;
+    font-family: "KOTRA_BOLD-Bold";
+    background-color: #f18a35;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 3px 4px 2px 4px;
+    width: 90px;
+    height: 24px;
+    margin-left: auto;
+  }
+  .question-content {
+    font-family: "NanumBarunGothic";
+    font-size: 12pt;
+    line-height: 24pt;
+    display: flex;
+  }
+  .question-content .number {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .question-choice {
+    font-family: "NanumBarunGothic";
+    font-size: 12pt;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+  .question-choice:hover {
+    background-color: #f18a35;
+    border: 1px solid #f18a35;
+    color: white;
+  }
+}

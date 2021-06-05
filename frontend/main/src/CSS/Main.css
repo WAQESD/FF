@@ -1,0 +1,46 @@
+@media screen and (min-width: 769px) {
+  .main-content-box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+
+  .main-content {
+    font-size: 16pt;
+    font-family: "KOTRA_GOTHIC";
+    margin-left: 16px;
+    line-height: 24pt;
+    margin-top: 12px;
+  }
+  .main-content:nth-child(1) {
+    margin-top: 0px;
+  }
+  .book-image {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .main-content {
+    font-size: 16pt;
+    font-family: "KOTRA_GOTHIC";
+    margin-left: 16px;
+    line-height: 24pt;
+    margin-top: 12px;
+  }
+  .main-content:nth-child(1) {
+    margin-top: 0px;
+  }
+  .book-image {
+    image-rendering: -webkit-optimize-contrast;
+    width: 60vw;
+    height: 91vw;
+    margin-bottom: 5vh;
+  }
+}

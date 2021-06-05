@@ -1,0 +1,31 @@
+@media screen and (min-width: 769px) {
+  .errata-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 144px;
+  }
+  .mobile-slide {
+    height: 0px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .errata-box {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    height: 144px;
+  }
+  .errata-box::-webkit-scrollbar:horizontal {
+    background-color: #f18a35;
+    height: 4px;
+  }
+  .mobile-slide {
+    text-align: center;
+    font-family: "KOTRA_BOLD-Bold";
+    font-size: 20px;
+    word-spacing: 28px;
+    color: rgba(232, 124, 19, 0.7);
+  }
+}

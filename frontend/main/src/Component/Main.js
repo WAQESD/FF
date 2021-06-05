@@ -49,6 +49,7 @@ const Main = ({ start }) => {
             width: "100%",
             display: "flex",
             justifyContent: "center",
+            height: "70px",
           }}
         >
           <button className="button" onClick={start}>
