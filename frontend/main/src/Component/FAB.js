@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const FAB = () => {
   const [top, setTop] = useState(() => {
     window.addEventListener("scroll", () => {
-      var position = window.scrollY + window.outerHeight * 0.75;
+      var position = window.scrollY + window.outerHeight * 0.7;
       setTop(position);
     });
     return window.scrollY + window.outerHeight * 0.75;

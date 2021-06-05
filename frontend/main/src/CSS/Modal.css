@@ -29,8 +29,9 @@
   }
   .modal-title {
     font-family: "KOTRA_BOLD-Bold";
-    font-size: 12pt;
+    font-size: 13pt;
     margin-left: 20px;
+    margin-top: 4px;
     color: rgba(0, 0, 0, 0.6);
   }
   .modal-button {
@@ -41,7 +42,10 @@
     background-color: white;
     margin-left: auto;
     cursor: pointer;
-    color: #f18a35;
+    color: rgba(241, 138, 53, 0.6);
+  }
+  .modal-button:hover {
+    color: rgba(241, 138, 53, 1);
   }
   .modal-link-box {
     display: flex;
@@ -111,12 +115,15 @@
   }
   .modal-twitter-icon {
     background-image: url(../Icons/icon-twitter.png);
+    image-rendering: -webkit-optimize-contrast;
   }
   .modal-facebook-icon {
     background-image: url(../Icons/icon-facebook.png);
+    image-rendering: -webkit-optimize-contrast;
   }
   .modal-kakao-icon {
     background-image: url(../Icons/icon-kakao.png);
+    image-rendering: -webkit-optimize-contrast;
   }
   .modal-sns {
     width: 80px;

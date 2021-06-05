@@ -11,7 +11,7 @@ const QuestionBox = ({ content, num, choice, select, onClick, setNum }) => {
     setTimeout(() => {
       onClick(n);
       setNum(num + 1);
-    }, 400);
+    }, 380);
   };
 
   return (

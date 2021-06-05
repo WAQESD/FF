@@ -66,6 +66,15 @@
   }
 }
 
+@keyframes up {
+  from {
+    font-size: 28pt;
+  }
+  to {
+    font-size: 36pt;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .App {
     display: flex;

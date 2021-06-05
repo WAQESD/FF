@@ -78,6 +78,7 @@ const Answer = ({ answer, select, questions, setModal }) => {
           </button>
         </div>
       </div>
+      <FAB></FAB>
     </Container>
   );
 };
